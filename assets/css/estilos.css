@@ -5,9 +5,10 @@
 
 :root{
 
-	--bgColor: #000000;
-	--primaryColor: #FC21A6 ;
-	--colorHover: #7CDBD5;
+	--bgColor: #000000; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	--primaryColor: #fd1d1d;
+	--colorHover: #EFE6DC;
 	--sizeButton: 70px;
 	--sizeIcons: 25px;
 	--width-content: 230px;
@@ -18,7 +19,7 @@
 body{
 	background: var(--bgColor);
 	font-size: 18px;
-	font-family: candara;';
+	font-family: candara;
 	position: relative;
 
 }
@@ -31,7 +32,7 @@ body{
 
 }
 .main-content h1{
-	color: color: #FEDC3D;
+	color: #FEDC3D;
 	font-weight: 300;
 	font-size: 3em;
 }
@@ -96,6 +97,11 @@ body{
 
 }
 
+.card-text{
+	text-align: center;
+	text-shadow:#FC21A6 2px 2px 3px;
+}
+
 #p {
   text-align: center;
   margin: 0;
@@ -112,10 +118,8 @@ body{
 	display: table;
 	width: 100%;
 	height: 100%;
-	
   
 }
-
 
 #centeralign {
 	display: table-cell;
@@ -140,35 +144,49 @@ display:inline-block;
 }
 
 #galeria img:hover {
-	border: 6px solid #7CDBD5;
-
-	
+	border: 4px solid #fd1d1d;
 }
 
-
 h2{
-	color: #EFE6DC;
+	color:  #fd1d1d;
 	font-family: candara;
 	font-size: 30px;
 }
 
 h3{
-	color:#FC21A6;
+	color: #EFE6DC;
 	font-size: 25px;
+	text-align:center;
+	font-family: 'Elephant';
+
 }
 
 h4{
-	color:#EFE6DC;
+	color: #EFE6DC;
+	
 }
 h5{
-	color: #EFE6DC;
+	color:  #fd1d1d;
 }
 
 ul{
-	color: #7CDBD5;
+	color: #fd1d1d;
 }
 
 footer{
-	color:#FC21A6;
+	color:#EFE6DC;
 
+
+}
+
+p{
+	text-align:justify;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+svg{
+	color: #fd1d1d;
 }
