@@ -1,0 +1,203 @@
+:root{ /*definimos la paleta y las fuentes registradas en el custom propertie*/
+    --letraGordita: 'Kanit', sans-serif;
+    --letraComputadora: 'Press Start 2P', cursive;
+    --letraTexto: 'Bungee', cursive;
+
+    --rosado: #fa448c;
+    --amarillo:#f5b402f8;
+    --blanco: #ffffff;
+    --negro: #000000;
+}
+html{
+    box-sizing: border-box; /*para hacer q el borde y el padding no afecte el ancho de los elementos*/
+    font-size: 62.5%; /*1rem = 10px*/
+}
+*, *:before, *:after{
+    box-sizing: inherit; /*lo q hace INHERIT es heredar del elemento padre(el HTML)*/
+}
+body{
+    font-family:var(--letraGordita);
+    font-size: 1.6rem;
+    line-height: 2;/*interlineado*/
+    
+}
+
+
+/*GLOBALES es lo q se va a usar mas de una vez*/
+.contenedor{
+    /* max-width: 120rem; /*ancho maximo 1200px mientras haya ese ancho disponible*/
+    /* width: 90%; /*si es menos de 1200px utiliza un WIDTH del 90%*/
+     width:min(90%, 120rem); /*esto reemplaza las 2 lineas de arriba*/
+     height: auto;
+     margin: 0 auto; /*para centrar el contenido horizontalmente en la pantalla*/
+}
+a{
+    text-decoration: none; /*a todos los enlaces les voy a quitar el interlineado*/
+    font-size: 1rem;
+    font-family: var(--letraTexto);
+    display: block; /*para q los elementos no queden uno junto al otro sino uno debajo del otro*/
+}
+h3, h4{
+    font-family: var(--letraGordita);
+    color: var(--amarillo);
+    font-size: 4rem;
+}
+h5{
+    font-family: var(--letraGordita);
+   
+    font-size: 3rem;
+    text-align: center;
+}
+h6{
+    font-size: 2rem;
+    font-family: var(--letraComputadora);
+}
+img{
+    max-width: 100%;/*ancho maximo*/
+}
+
+/*UTILIDADES*/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+/*HEADER*/
+.webp .header{
+    background-image: url(../img/compuROSA.jpg);
+}
+.no-webp .header{
+    background-image: url(../img/compuROSA.jpg);
+}
+.header{
+    height: 60rem;/*altura*/
+    background-size: cover;/*para q tome todo el espacio disponible*/
+    background-repeat: no-repeat;/*para q no se repita la imagen*/
+    background-position: center center; /*para elegir q parte de la foto queremos ver cuando se achica*/  
+}
+.webp .header__dos{
+    background-image: url(../img/fondoAMARILLO.jpg); 
+}
+.header__dos{
+    background-image: url(../img/fondoAMARILLO.jpg);    
+}
+.header__texto{
+    text-align: center;
+    color:var(--amarillo);
+    margin-top: 5rem;
+    font-size: 2.8rem;
+}
+.sobre__mi{
+    color:var(--rosado);
+}
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem;
+        font-family: var(--letraComputadora);
+    }
+}
+.barra{
+    padding-top: 2rem;
+}
+/*NAVEGACION*/
+@media (min-width: 768px) {
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo{
+    color: var(--amarillo);   
+}
+.logo__dos{
+    color: var(--rosado);
+
+}
+.logo__nombre{
+    font-weight: 400;
+    font-size: 6rem;
+    font-family: var(--letraComputadora);   
+}
+
+.logo__bold{
+    font-weight: 700;
+}
+@media (min-width: 768px) {
+    .galeria{
+        display: flex;
+        gap: 2rem;
+       
+    }
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--amarillo);
+}
+.navegacion__dos{
+    color: var(--rosado);
+}
+
+/*SOBRE MI*/
+
+@media (min-width: 768px) {
+    .sobre-mi{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.link{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--letraComputadora);
+    font: bold;
+    color: var(--rosado);
+}
+.parrafo{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footer{
+    background-color: var(--amarillo);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    color: var(--negro);
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.block{
+    text-align:center;
+    
+}
+.list{
+    text-align: center;
+    display:inline-block;
+    color: var(--rosado);
+    font-size: 1.8rem;
+    font-family:var(--letraComputadora) ;
+    font: bold;
+}
+.color_fondo{
+    background-color: #fa448c;
+}
+.rosadito{
+    color: var(--rosado);
+}
+
+
+
+
+
+
+
