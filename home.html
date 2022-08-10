@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <meta name="description" content="Mi Portfolio">
+    
+    <!--prefetch-->
+   <link rel="prefetch" href="proyectos.html" as="document">
+    
+   <!--preload-->
+   <link rel="preload" href="css/normalize.css" as="style">
+   <link rel="stylesheet" href="css/normalize.css"><!--enlazo normalize-->
+
+   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:wght@200&family=Press+Start+2P&display=swap"  crossorigin="crossorigin" as="font" >
+   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Kanit:wght@200&family=Press+Start+2P&display=swap" rel="stylesheet"> <!--enlazo la letra de google-->
+
+   <link rel="preload" href="css/style.css" as="style">
+   <link rel="stylesheet" href="css/style.css"> <!--enlazo la hoja de estilos-->
+
+   
+</head>
+<body>
+
+
+    <header class="header"> <!--va a ser un bloque-->
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="home.html">
+                    <h1 class="logo__nombre no-margin centra-texto"><span class="logo__bold">S</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="sobreMi.html" class="navegacion__enlace">Sobre Mi</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                    <a href="proyectos.html" class="navegacion__enlace">Proyectos</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Hola! Soy Solita :)</h2>
+        </div>
+
+        
+
+    </header>
+
+
+
+    
+
+    <section>
+        <div class="header__texto">
+            <h6 class="no-margin rosadito">Si estás leyendo esto <br>es porque estás interesado <br>en saber sobre mi trabajo <br> así que, bienvenido... </h6>
+        </div>
+
+        <section>
+            <script>
+                function typeEffect(element, speed) {
+                var text = element.innerHTML;
+                element.innerHTML = "";
+                
+                var i = 0;
+                var timer = setInterval(function() {
+                if (i < text.length) {
+                    element.append(text.charAt(i));
+                    i++;
+                } else {
+                    clearInterval(timer);
+                }
+                }, speed);
+                }
+            
+                
+                // velocidad de escritura
+                var speed = 95;
+                var h2 = document.querySelector('h2');
+                
+               
+                var delay = h2.innerHTML.length * speed + speed;
+               
+                
+                
+                // tipo de efecto
+                typeEffect(h2, speed);
+                
+            </script>
+               
+
+            <script>
+                const btnMenu1=document.querySelector('#menu');
+                    menuContent=document.querySelector('.menu-content');
+            
+                btnMenu.addEventListener('click',()=>{
+                    menuContent.classList.toggle('menu-active');
+            
+                });
+            
+            </script>
+        </section>
+    </section>
+
+    <footer class="footer">
+        <div class="contenedor">
+                <div>Hecho por Solita con  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 20" fill=#fa448c>
+                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" />
+                    </svg>
+                     2022 Copyright
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modernizr.js"></script>
+
+</body>
+</html>
