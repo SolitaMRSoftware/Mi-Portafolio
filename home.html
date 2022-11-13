@@ -19,19 +19,14 @@
 
    <link rel="preload" href="css/style.css" as="style">
    <link rel="stylesheet" href="css/style.css"> <!--enlazo la hoja de estilos-->
-
-   
 </head>
 <body>
-
-
     <header class="header"> <!--va a ser un bloque-->
         <div class="contenedor">
             <div class="barra">
                 <a class="logo" href="home.html">
                     <h1 class="logo__nombre no-margin centra-texto"><span class="logo__bold">S</span></h1>
                 </a>
-
                 <nav class="navegacion">
                     <a href="sobreMi.html" class="navegacion__enlace">Sobre Mi</a>
                     <a href="contacto.html" class="navegacion__enlace">Contacto</a>
@@ -39,25 +34,15 @@
                 </nav>
             </div>
         </div>
-
         <div class="header__texto">
             <h2 class="no-margin">Hola! Soy Solita :)</h2>
         </div>
-
-        
-
     </header>
-
-
-
-    
-
     <section>
         <div class="header__texto">
-            <h6 class="no-margin rosadito">Si estás leyendo esto <br>es porque estás interesado <br>en saber sobre mi trabajo <br> así que, bienvenid@... </h6>
+            <h6 class="no-margin rosadito">Si estás leyendo ésto <br>es porque estás interesado <br>en saber sobre mi trabajo <br> así que, bienvenid@... </h6>
         </div>
-
-        <section>
+        <div>
             <script>
                 function typeEffect(element, speed) {
                 var text = element.innerHTML;
@@ -73,34 +58,23 @@
                 }
                 }, speed);
                 }
-            
-                
                 // velocidad de escritura
                 var speed = 95;
                 var h2 = document.querySelector('h2');
-                
-               
                 var delay = h2.innerHTML.length * speed + speed;
-               
-                
-                
                 // tipo de efecto
                 typeEffect(h2, speed);
-                
             </script>
                
-
             <script>
                 const btnMenu1=document.querySelector('#menu');
                     menuContent=document.querySelector('.menu-content');
             
                 btnMenu.addEventListener('click',()=>{
                     menuContent.classList.toggle('menu-active');
-            
                 });
-            
             </script>
-        </section>
+        </div>
     </section>
 
     <footer class="footer">

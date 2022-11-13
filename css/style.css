@@ -21,8 +21,6 @@ body{
     line-height: 2;/*interlineado*/
     
 }
-
-
 /*GLOBALES es lo q se va a usar mas de una vez*/
 .contenedor{
     /* max-width: 120rem; /*ancho maximo 1200px mientras haya ese ancho disponible*/
@@ -179,7 +177,6 @@ img{
 
 .block{
     text-align:center;
-    
 }
 .list{
     text-align: center;
@@ -195,12 +192,13 @@ img{
 .rosadito{
     color: var(--rosado);
 }
-
-
-
 .sobre-mi__texto .parrafo{
     text-align: center;
 }
-
-
-
+.sobre-mi__imagen{
+    margin-bottom: 5rem;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s; 
+}
+.sobre-mi__imagen:hover{
+    -webkit-transform: scale(1.2); 
+}
