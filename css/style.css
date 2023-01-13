@@ -1,204 +1,348 @@
-:root{ /*definimos la paleta y las fuentes registradas en el custom propertie*/
-    --letraGordita: 'Kanit', sans-serif;
-    --letraComputadora: 'Press Start 2P', cursive;
-    --letraTexto: 'Bungee', cursive;
+:root {
+  /*definimos la paleta y las fuentes registradas en el custom propertie*/
 
-    --rosado: #fa448c;
-    --amarillo:#f5b402f8;
-    --blanco: #ffffff;
-    --negro: #000000;
+  --letraSubtitulo: 'Kanit', sans-serif;
+  --letraTexto: 'Lora', serif;
+  --letraNombre: 'Rajdhani', sans-serif;
+
+  --fontImprenta: 'Nunito', sans-serif;
+  --fontImprenta2: 'Lora', serif;
+  --fontImprentaFinita: 'Cormorant Garamond', serif;
+
+  --blanco: #f5f6f7;
+  --negroClaro: #080c17;
+  --negroPaleta: #282726;
+  --grisTopo:#54504c;
+  --fucsia: #fe0ac2;
+  --fucsiaOscuro: #8c0c69;
+  --naranja: #ff630c;
+
+  /*background-image: linear-gradient(96deg, #0d7148, #68ffc8);*/
+  /*background-image: linear-gradient(-45deg, #7cff6b, #0a8270);*/
+  /*background-image: linear-gradient(-45deg, #f7ce38, #fc210d);*/
 }
-html{
-    box-sizing: border-box; /*para hacer q el borde y el padding no afecte el ancho de los elementos*/
-    font-size: 62.5%; /*1rem = 10px*/
+html {
+  box-sizing: border-box;
+  /*para hacer q el borde y el padding no afecte el ancho de los elementos*/
+  font-size: 62.5%;
+  /*1rem = 10px*/
 }
+
+
 *, *:before, *:after{
-    box-sizing: inherit; /*lo q hace INHERIT es heredar del elemento padre(el HTML)*/
-}
-body{
-    font-family:var(--letraGordita);
-    font-size: 1.6rem;
-    line-height: 2;/*interlineado*/
-    
-}
-/*GLOBALES es lo q se va a usar mas de una vez*/
-.contenedor{
-    /* max-width: 120rem; /*ancho maximo 1200px mientras haya ese ancho disponible*/
-    /* width: 90%; /*si es menos de 1200px utiliza un WIDTH del 90%*/
-     width:min(90%, 120rem); /*esto reemplaza las 2 lineas de arriba*/
-     height: auto;
-     margin: 0 auto; /*para centrar el contenido horizontalmente en la pantalla*/
-}
-a{
-    text-decoration: none; /*a todos los enlaces les voy a quitar el interlineado*/
-    font-size: 1rem;
-    font-family: var(--letraTexto);
-    display: block; /*para q los elementos no queden uno junto al otro sino uno debajo del otro*/
-}
-h3, h4{
-    font-family: var(--letraGordita);
-    color: var(--amarillo);
-    font-size: 4rem;
-}
-h5{
-    font-family: var(--letraGordita);
-   
-    font-size: 3rem;
-    text-align: center;
-}
-h6{
-    font-size: 2rem;
-    font-family: var(--letraComputadora);
-}
-img{
-    max-width: 100%;/*ancho maximo*/
+  box-sizing: inherit;/*lo q hace inherit es heredar del elemento padre(html)*/
 }
 
-/*UTILIDADES*/
-.no-margin{
-    margin: 0;
-}
-.no-padding{
-    padding: 0;
-}
-.centrar-texto{
-    text-align: center;
+body {
+  line-height: 2;
+  background-color: var(--negroPaleta);
+  /*interlineado*/
 }
 
-/*HEADER*/
-.webp .header{
-    background-image: url(../img/compuROSA.jpg);
-}
-.no-webp .header{
-    background-image: url(../img/compuROSA.jpg);
-}
-.header{
-    height: 60rem;/*altura*/
-    background-size: cover;/*para q tome todo el espacio disponible*/
-    background-repeat: no-repeat;/*para q no se repita la imagen*/
-    background-position: center center; /*para elegir q parte de la foto queremos ver cuando se achica*/  
-}
-.webp .header__dos{
-    background-image: url(../img/fondoAMARILLO.jpg); 
-}
-.no-webp .header{
-    background-image: url(../img/fondoAMARILLO.jpg);
+/**GLOBALES**/
+.contenedor {
+  /* max-width: 120rem; /*ancho maximo 1200px mientras haya ese ancho disponible*/
+  /* width: 90%; /*si es menos de 1200px utiliza un WIDTH del 90%*/
+  width: min(90%, 120rem);
+  /*esto reemplaza las 2 lineas de arriba*/
+  margin: 0 auto;
+  /*para centrar el contenido horizontalmente en la pantalla*/
 }
 
-.header__texto{
-    text-align: center;
-    color:var(--amarillo);
-    margin-top: 5rem;
-    font-size: 2.8rem;
+a {
+  text-decoration: none;
+  /*a todos los enlaces les voy a quitar el interlineado*/
 }
-.sobre__mi{
-    color:var(--rosado);
+
+img {
+  max-width: 100%;
 }
-@media (min-width: 768px) {
-    .header__texto{
-        margin-top: 15rem;
-        font-family: var(--letraComputadora);
-    }
+/**UTILIDADES**/
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.container{
+  /* max-width: 120rem; /*ancho maximo 1200px mientras haya ese ancho disponible*/
+  /* width: 90%; /*si es menos de 1200px utiliza un WIDTH del 90%*
+  width: min(90%, 120rem);
+  /*esto reemplaza las 2 lineas de arriba
+  height: auto;
+  margin: 0 auto;
+  /*para centrar el contenido horizontalmente en la pantalla*/
+
+ 
+  max-width: 100%;
+  height: 110vh; /*ocupa el 80% de la pantalla*/
+  background-image: url(../img/banner.png); /*por si no lo soporta cargamos la imagen con JPG*/
+  background-size: cover; /*para q tome todo el espacio dispnible*/
+  background-repeat: no-repeat; /*para q la imagen no se repita*/
+  background-position: center center;
+}
+.container .wrap{
+  max-width: 1000px; /*que no ocupe de ancho a ancho*/
+  margin: 0 auto; /*para que el contenido se centre */
+  height: 100%;
+ 
+  flex-flow: row wrap; /*cuando la pantalla se achique pueda escalar, el div de la izq sube y el derecho se queda abajo*/
+  justify-content: left;
+}
+.container .wrap .box{
+  flex-basis: 50%; /*tamaño q ocupa esta caja, condensa todo*/
+  color: var(--negroPaleta);
+  text-align: left;
+  padding-top: 25rem;
+ /*se alinea vertical al centro*/
+}
+/*texto*/
+
+.container .wrap .box h1 {
+  font-size: 60px;
+  line-height: .9; /*espacio de arriba de las letras. Se mide hasta 1*/
+  padding-bottom: 3px;
+  color: var(--naranja);
+  font-family: var(--letraNombre);
+}
+.container .wrap .box p{
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--fucsiaOscuro);
+  font-family: var(--letraTexto);
+}
+h2{
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+.desarrollo{
+  background-color: var(--negroClaro);
+}
+a {
+  text-decoration: none;
+  /*a todos los enlaces les voy a quitar el interlineado*/
 }
 .barra{
-    padding-top: 2rem;
+  padding-top: 1rem; /*para tener separacion entre el borde y la barra*/
 }
-/*NAVEGACION*/
-@media (min-width: 768px) {
-    .barra{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-.logo{
-    color: var(--amarillo);   
-}
-.logo__dos{
-    color: var(--rosado);
-
-}
-.logo__nombre{
-    font-weight: 400;
-    font-size: 6rem;
-    font-family: var(--letraComputadora);   
+@media (min-width: 768PX) {
+  .barra{
+      display: flex;
+      justify-content: space-between; /*lo uso para alinear contenido horizontalmente. SPACE-BETWEEN es para colocar uno del lado izq. y uno del derecho*/
+      align-items: center; /*para alinear verticalmente*/
+  }
 }
 
-.logo__bold{
-    font-weight: 700;
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
 }
-@media (min-width: 768px) {
-    .galeria{
-        display: flex;
-        gap: 2rem;
-       
-    }
-}
-.navegacion__enlace{
-    display: block;
-    text-align: center;
-    font-size: 1.8rem;
-    color: var(--amarillo);
-}
-.navegacion__dos{
-    color: var(--rosado);
-}
-
-/*SOBRE MI*/
 
 @media (min-width: 768px) {
-    .sobre-mi{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2rem;
-    }
+  .navegacion-principal {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+}
+.navegacion-principal__uno{
+  background-color: var(--negroPaleta);
+}
+.navegacion-principal__uno a{
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size:2.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  font-family: var(--fontImprentaFinita);
+  user-select: none;
 }
 
-.link{
-    text-align: center;
-    font-size: 1.3rem;
-    font-family: var(--letraComputadora);
-    font: bold;
-    color: var(--rosado);
-}
-.parrafo{
-    text-align: center;
-    font-size: 2rem;
+.navegacion-principal__uno a:hover {    /*otras paginas*/
+  color: var(--negroPaleta);
+  background-color: var(--naranja);
 }
 
-.footer{
-    background-color: var(--amarillo);
-    padding: 3rem 0;
-    margin-top: 4rem;
-    color: var(--negro);
-    text-align: center;
-    font-size: 1.8rem;
+.navegacion-principal__dos{
+  background-color: var(--naranja);
+}
+.navegacion-principal__dos a{
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size:2.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  font-family: var(--fontImprentaFinita);
+  user-select: none;
 }
 
-.block{
-    text-align:center;
+.navegacion-principal__dos a:hover {    /*otras paginas*/
+  color: var(--naranja);
+  background-color: var(--negroPaleta);
 }
-.list{
-    text-align: center;
-    display:inline-block;
-    color: var(--rosado);
-    font-size: 1.8rem;
-    font-family:var(--letraComputadora) ;
-    font: bold;
+.fondo{
+  background-color: var(--blanco);
+  height: 70%;
+  /*background: linear-gradient(96deg, #282726, #54504c, #86817c);*/
 }
-.color_fondo{
-    background-color: #fa448c;
+.sombra{
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(56,48,56,0.89);
+-moz-box-shadow: 0px 5px 15px 0px rgba(56,48,56,0.89);
+box-shadow: 0px 5px 15px 0px rgba(56,48,56,0.89);
 }
-.rosadito{
-    color: var(--rosado);
+/*sobre mi*/
+.sobre-mi {
+ margin-bottom: 5rem;
+ padding-bottom: 5rem;
 }
-.sobre-mi__texto .parrafo{
-    text-align: center;
+.sobre-mi__titulo{
+  text-align: center;
+  color: var(--fucsiaOscuro);
+  font-size: 3.5rem;
+  justify-content: center;
+  padding-top: 2rem;
+  font-family: var(--letraTexto);
 }
-.sobre-mi__imagen{
-    margin-bottom: 5rem;
-    -webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s; 
+.subtitulo{
+  text-align: center;
+  color: var(--blanco);
+  font-size: 2rem;
+  justify-content: center;
+  font-family: var(--letraTexto);
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+
 }
-.sobre-mi__imagen:hover{
-    -webkit-transform: scale(1.2); 
+.sobre-mi__texto {
+  color: var(--blanco);
+  font-size: 1.5rem;
+  font-family: var(--letraTexto);
+  text-align: justify;
+  justify-content: center;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+/*ICONOS con movimiento*/
+.icono{/*esto va en el de niños*/
+  text-align: center;
+  margin-top:1rem; 
+}
+.flecha{
+  width: 250px;
+  height: 250px;
+}
+.icono .flecha{
+  animation: 3s infinite suspender;
+  width: 250px;
+  height: 250px;
+}
+
+@keyframes suspender {
+  50% {
+      -webkit-transform: translateY(-40px);
+  }
+
+  50% {
+      -webkit-transform: translateY(40px);
+  }
+}
+.tecnologias{
+  color: var(--fucsia);
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: var(--letraTexto);
+  padding-bottom: 3rem;
+}
+
+/*galeria*/
+.content-card{
+  width: 500px;
+  height: 320px;
+  margin: 25px;
+  color:var(--fucsia);
+  font-size: 2rem;
+  border-radius: 3px;
+  box-shadow: 3px 2px 2px 3px var(--negroClaro);
+}
+
+.galeria{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding-bottom: 5rem;
+}
+.content-card{
+  max-width: 400px;
+  padding: 3rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out 0.1s; 
+}
+.content-card:hover{
+  -webkit-transform: scale(1.2);   
+}
+
+img .galeria_dos {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+img .galeria_dos {
+  max-width: 400px;
+  padding: 3rem;  
+}
+
+.sitios{
+  color: var(--fucsia);
+  font-size: 2rem;
+  font-family: var(--letraTexto);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+h4{
+  font-family: var(--letraTexto);
+  text-align: center;
+  font-size: 1.8rem;
+}
+.imagen_galeria{
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.redes{
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 5rem;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out 0.1s; 
+}
+.redes img:hover{
+  -webkit-transform: scale(1.2);   
+}
+
+.contacto_mail {
+  color: var(--fucsiaOscuro);
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+/**footer**/
+.footer {
+  padding: 1rem;
+  text-align: center;
+  color: var(--negroPaleta);
+  background-color: var(--naranja);
+  font-size: 1.5rem;
+  font-family: var(--letraTexto);
+  user-select: none;
+ 
 }
